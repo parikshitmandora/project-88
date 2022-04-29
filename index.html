@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hit the Goal</title>
+<link rel="stylesheet" href="style.css">
+<script src="fabric.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="body_background" onload="load_img()">
+	<center>
+		<h3 id="hd3">Hit the Goal</h3>
+		<!--- Create canvas--->
+	</center>
+	<script src="main.js"></script>
+</body>
+</html>
+
+<canvas width="1100" height="500"></canvas>
+
+var canvas = new fabric.canvas('mycanvas')
+ball_y=0;
+ball_x=0;
+hole_y=400;
+hole_x=800;
+
+function load_img()
+{
+	fabric.image.formUrl('golf-h1.png' , function(image)
+	ball_obj = img;
+	ball_obj.scaleToWidth(50);
+    ball_obj.scaleToHeight(50);
+	ball_obj.set({
+
+	})
+
+top:ball_y
+left:ball_x
+});
+canvas.add(ball_obj);
+});
+}
+	
+if ((ball_x==hole_x)&&(ball_y==hole_y)){
+	canvas.remove(ball_obj);
+
+doument.getElementById("hd3").innerHTML="you have hit the goal!!!";
+document.getElementById("myCanvas").style.borderColor="red"
+
+function down()
+{
+	if(ball_y <=450>)
+	{
+		ball_y = ball_y + block_image_height
+		console.log("block image height="+ block_image_height);
+		console.log("When Down arrow key is pressed, x =  " + ball_x + " , y = "+ball_y);
+		canvas.remove(ball_obj);
+		new_image();
+	}
+}
+
